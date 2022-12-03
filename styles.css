@@ -1,0 +1,622 @@
+/* Para ingresar al tipo de fuente directo de google font */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+
+/* El '*' Es para indicar que es a todo */
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+
+/* Solo al HTML */
+html{
+    /* Es como lo que usamos para el jquery peor con html */
+    scroll-behavior: smooth;
+}
+
+/* Menu */
+.contenedor-header{
+    background-color: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+
+}
+
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #5ce1e6;
+    text-decoration: none;
+
+}
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+
+}
+
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+
+}
+
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+}
+.nav-responsive{
+    background-color: #1CB698;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+
+}
+
+/* Inicio */
+.inicio{
+    /* El fondo se va oscureciendo poco a poco con el gradient */
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/Background.jpeg);
+    background-size: cover;
+    /* Aqui es para recortar la imagen de acuerdo al tamaño de la pagina */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+}
+
+.inicio .contenido-banner{
+    /* Crear el banner */
+    padding: 20px;
+    background-color: #1CB698;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+
+}
+.inicio .contenido-banner img{
+    /* Crear el circulo del banner */
+    margin-top: 40px;
+    border: 10px solid #1e2126;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+/* Titulo h1 */
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: 'Righteous';
+}
+
+/* Subtitulo H2 */
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .contenido-banner .redes a{
+    /* Iconos de las redes sociales */
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+
+
+}
+
+
+.inicio .contenido-banner .redes a:hover{
+    background-color: rgb(40, 63, 61);
+}
+
+/* Sobre mi */
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col
+{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1CB698;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+.Download{
+    text-decoration: none;
+}
+
+
+/* SECCION PORTFOLIO */
+.portfolio{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+    height: 100vh;
+
+}
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}
+
+/* Habilidades */
+.knowledge{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Buttom */
+
+.Blog{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon:hover{
+    background: #1CB698;
+    box-shadow: 0 0 10px #1CB698, 0 0 40px #1CB698, 0 0 80px #1CB698;
+    transition-delay: 1s;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#1CB698);
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#1CB698);
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#1CB698);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#1CB698);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/* Blog */
+.Blog h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.contenido-Blog{
+    text-align: center;
+    margin: auto;
+}
+
+.Blog p{
+    font-size: 20px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0px 50px ;
+
+}
+
+/* Contacto */
+.contactme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #252A2E;
+}
+
+.contenedor-contacto{
+    width: 80%;
+    padding: 20px;
+}
+
+.contenedor-contacto h2{
+    width: 100%;
+    color: #1CB698;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contenedor-contacto .row100
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300, px, 1fr));
+}
+
+.contenedor-contacto .row100 .col
+{
+    /* Separacion de los form */
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    /* Da una transicion de .5s para hacer el proceso */
+    transition: 0.5s;
+}
+
+.contenedor-contacto .row100 .inputBox
+{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    color: rgba(203, 193, 193, 0.993);
+}
+
+.contenedor-contacto .row100 .inputBox input, .contenedor-contacto .row100 .inputBox.textarea textarea
+
+{
+    /* Poner las frases dentro de los input */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.contenedor-contacto .row100 .inputBox .text
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+
+/* input:focus funciona para generar un foco al tocar dicho formulario */
+.contenedor-contacto .row100 .inputBox input:focus + .text,
+/* valid indica cualquier elemento input que se valide */
+.contenedor-contacto .row100 .inputBox input:valid + .text
+
+{
+    top: -35px;
+    left: -10px;
+}
+
+.contenedor-contacto .row100 .inputBox .line
+{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #1CB698;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+
+/* Aqui un no comprendo por que se usa el ~ */
+.contenedor-contacto .row100 .inputBox input:focus ~ .line,
+.contenedor-contacto .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+
+.contenedor-contacto .row100 .inputBox.textarea
+{
+    position: relative;
+    width: 50%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.contenedor-contacto .row100 .inputBox.textarea textarea
+{
+    height: 100%;
+    resize: none;
+}
+
+.contenedor-contacto .row100 .inputBox textarea:focus ~ .text,
+.contenedor-contacto .row100 .inputBox textarea:valid ~ .text
+{
+    top: -35px;
+    left: -10px;
+}
+
+.contenedor-contacto .row100 .inputBox textarea:focus ~ .line,
+.contenedor-contacto .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+}
+
+/* Boton enviar css */
+input[type="submit"]
+{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #1CB698;
+    color: #000;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+/* GoodBye */
+.GB{
+    position: absolute;
+}
+/* Footer */
+
+footer{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .redes{
+    margin-bottom: 20px;
+}
+
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -25%;
+    border-radius: 50%;
+    line-height: 50%;
+    font-size: 18px;
+}
