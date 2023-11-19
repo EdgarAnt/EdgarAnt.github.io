@@ -620,3 +620,25 @@ footer .arriba{
     line-height: 50%;
     font-size: 18px;
 }
+
+/*Myblog (The beginning)*/
+.process img{
+    width: 20%;
+}
+
+.process{
+    padding: 0px 0px 50px 0px;
+}
+
+.contenedor-header img {
+    position: absolute;
+    top: 20px; /* Ajusta de forma vertical */
+    right: 40px; /* Ajusta de forma horizontal */
+    width: auto;
+    height: auto;
+    max-width: 50px; /* Maximo ajuste de la imagen */
+    max-height: 50px; /* Maximo ajuste de la imagen */
+
+  }
+
+  /*End of CSS myBLog */
