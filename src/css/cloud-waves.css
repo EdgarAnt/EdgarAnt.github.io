@@ -1,0 +1,30 @@
+.wave-circle {
+    @apply absolute rounded-full opacity-60;
+    animation: waveFloat 3s infinite ease-in-out;
+}
+
+.wave-1 {
+    @apply w-64 h-64 bg-gray-200;
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    @apply w-48 h-48 bg-gray-300;
+    animation-delay: 0.5s;
+}
+
+.wave-3 {
+    @apply w-32 h-32 bg-gray-400;
+    animation-delay: 1s;
+}
+
+@keyframes waveFloat {
+    0%, 100% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1) translate(-10px, -10px);
+        opacity: 0.8;
+    }
+}

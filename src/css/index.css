@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Animaciones personalizadas */
+.modal-animation {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Minimal Elegant Button */
+.btn-minimal {
+    position: relative;
+    overflow: visible;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Estilos base para las líneas */
+.btn-minimal::before,
+.btn-minimal::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: #666;
+    transform: scaleX(0.3);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-minimal::before {
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+}
+
+.btn-minimal::after {
+    top: 0;
+    left: 0;
+    transform-origin: right;
+}
+
+/* Estilos para las líneas laterales */
+.btn-minimal .side-line {
+    position: absolute;
+    top: 0;
+    width: 0.5px;
+    height: 100%;
+    background-color: #666;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.btn-minimal .side-line-left {
+    left: 0;
+    transform-origin: top;
+}
+
+.btn-minimal .side-line-right {
+    right: 0;
+    transform-origin: bottom;
+}
+
+.btn-minimal .text-container {
+    position: relative;
+    display: inline-block;
+    padding: 0 4px;
+    transition: transform 0.3s ease;
+}
+
+/* Animaciones para desktop (hover) */
+@media (min-width: 1024px) {
+    .btn-minimal:hover::before,
+    .btn-minimal:hover::after {
+        transform: scaleX(1);
+    }
+
+    .btn-minimal:hover .side-line {
+        transform: scaleY(1);
+    }
+
+    .btn-minimal:hover .text-container {
+        transform: translateY(-2px);
+    }
+}
+
+/* Animaciones para móvil y tablet (loop automático) */
+@media (max-width: 1023px) {
+    .btn-minimal::before {
+        animation: lineExpandLeft 2s infinite;
+    }
+
+    .btn-minimal::after {
+        animation: lineExpandRight 2s infinite;
+    }
+
+    .btn-minimal .side-line-left {
+        animation: lineExpandVerticalTop 2s infinite;
+    }
+
+    .btn-minimal .side-line-right {
+        animation: lineExpandVerticalBottom 2s infinite;
+    }
+
+    .btn-minimal .text-container {
+        animation: textFloat 2s infinite;
+    }
+}
+
+@keyframes lineExpandLeft {
+    0%, 100% { transform: scaleX(0.3); }
+    50% { transform: scaleX(1); }
+}
+
+@keyframes lineExpandRight {
+    0%, 100% { transform: scaleX(0.3); }
+    50% { transform: scaleX(1); }
+}
+
+@keyframes lineExpandVerticalTop {
+    0%, 100% { transform: scaleY(0); }
+    50% { transform: scaleY(1); }
+}
+
+@keyframes lineExpandVerticalBottom {
+    0%, 100% { transform: scaleY(0); }
+    50% { transform: scaleY(1); }
+}
+
+@keyframes textFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* Scrollbar personalizado */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animación delay personalizada */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+/* Custom
+ scrollbar styles */
+.projects-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
