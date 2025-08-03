@@ -15,7 +15,7 @@ const ProjectModal = ({ project, onClose }) => {
                 className="absolute inset-0 bg-black opacity-50"
                 onClick={onClose}
             ></div>
-            <div className="relative bg-white rounded-lg w-[90vw] h-[90vh] overflow-hidden">
+            <div className="relative bg-white rounded-lg w-[95vw] h-[95vh] sm:w-[90vw] sm:h-[90vh] overflow-hidden">
                 {/* Header */}
                 <div className="bg-[#f6f6f6] border-b border-[#e5e5e5] p-4 flex items-center justify-between">
                     <button

@@ -16,7 +16,7 @@ const ProjectsView = ({ onBack }) => {
                 <img
                     src="/images/Axol/AxolSitting.ico"
                     alt="Axol"
-                    className={viewType === "grid" ? "w-12 h-12" : "w-8 h-8"}
+                    className={viewType === "grid" ? "w-12 h-12 sm:w-12 sm:h-12 object-contain" : "w-8 h-8"}
                 />
             ),
             type: "UX/UI + Fullstack & MIT Collaboration",
@@ -340,8 +340,7 @@ def comprimir_gif(ruta_gif):
                 <img
                     src="/images/algorithmic_assistant/Graphs.ico"
                     alt="Algorithmic Assistant"
-                    className={viewType === "grid" ? "w-12 h-12" : "w-8 h-8"}
-                    style={{ objectFit: "contain" }}
+                    className={viewType === "grid" ? "w-12 h-12 sm:w-12 sm:h-12 object-contain" : "w-8 h-8"}
                 />
             ),
             type: "React.js, Tailwind & API Prolog",
@@ -443,8 +442,7 @@ def comprimir_gif(ruta_gif):
                 <img
                     src="/images/Portfolio/meWithoutBackground.png"
                     alt="Portfolio"
-                    className={viewType === "grid" ? "w-16 h-16" : "w-10 h-10"}
-                    style={{ objectFit: "contain" }}
+                    className={viewType === "grid" ? "w-16 h-16 sm:w-16 sm:h-16 object-contain" : "w-10 h-10"}
                 />
             ),
             type: "React.js, Laravel, Inertia.js, Tailwind, photoshop",
@@ -566,7 +564,7 @@ portfolio/
                 <div
                     className={
                         viewType === "grid"
-                            ? "grid grid-cols-4 gap-6"
+                            ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 justify-items-center"
                             : "space-y-2"
                     }
                 >
