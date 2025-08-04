@@ -442,7 +442,7 @@ def comprimir_gif(ruta_gif):
                 <img
                     src="/images/Portfolio/meWithoutBackground.png"
                     alt="Portfolio"
-                    className={viewType === "grid" ? "w-16 h-16 sm:w-16 sm:h-16 object-contain" : "w-10 h-10"}
+                    className={viewType === "grid" ? "w-24 h-24 sm:w-24 sm:h-24 object-contain" : "w-14 h-14 object-contain"}
                 />
             ),
             type: "React.js, Laravel, Inertia.js, Tailwind, photoshop",
