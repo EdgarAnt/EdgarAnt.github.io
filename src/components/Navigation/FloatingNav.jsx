@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import MenuButton from './MenuButton';
 import FloatingDots from './FloatingDots';
 
 const FloatingNav = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const handleClick = (e, id) => {
         e.preventDefault();
@@ -18,8 +19,25 @@ const FloatingNav = () => {
         }
     };
 
+    // Efecto para cerrar el menú al hacer clic fuera
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen]);
+
     return (
-        <div className="fixed top-8 left-4 md:top-20 md:left-20 z-50">
+        <div ref={menuRef} className="fixed top-8 left-4 md:top-20 md:left-20 z-50">
             <FloatingDots />
             <MenuButton 
                 isOpen={isOpen} 
