@@ -180,9 +180,15 @@ const Welcome = () => {
                     <div>
                         <Link 
                             to="/history" 
-                            className="px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-5 bg-white text-gray-700 rounded-lg font-bold text-lg sm:text-xl lg:text-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:-translate-y-1 tracking-wide"
+                            className="cloud-button text-lg sm:text-xl lg:text-2xl tracking-wide"
                         >
-                            MY HISTORY
+                            <div className="cloud-decoration"></div>
+                            <div className="cloud-decoration"></div>
+                            <div className="cloud-decoration"></div>
+                            <div className="cloud-decoration"></div>
+                            <div className="cloud-decoration"></div>
+                            <div className="cloud-decoration"></div>
+                            <span className="relative z-10">MY HISTORY</span>
                         </Link>
                     </div>
                 </div>

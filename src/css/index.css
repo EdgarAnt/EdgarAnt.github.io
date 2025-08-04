@@ -196,3 +196,147 @@
 .projects-container::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Cloud Button Styles */
+.cloud-button {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(148, 163, 184, 0.1), 
+              0 1px 4px rgba(148, 163, 184, 0.08),
+              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  overflow: visible;
+}
+
+.cloud-button::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -15px;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.5) 70%, transparent 100%);
+  border-radius: 70% 30% 60% 40% / 50% 60% 40% 50%;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.cloud-button::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(248, 250, 252, 0.7) 0%, rgba(241, 245, 249, 0.4) 70%, transparent 100%);
+  border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.cloud-button:hover {
+  transform: translateY(-1px) scale(1.02);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  border-radius: 50% 60% 30% 40% / 60% 30% 70% 40%;
+  border-color: rgba(148, 163, 184, 0.4);
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.15), 
+              0 2px 6px rgba(148, 163, 184, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 1);
+  color: #334155;
+}
+
+.cloud-button:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.cloud-button:hover::after {
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+
+.cloud-button:active {
+  transform: translateY(-1px) scale(1.01);
+  transition: all 0.1s ease;
+}
+
+/* Cloud decorative elements */
+.cloud-button .cloud-decoration {
+  position: absolute;
+  background: radial-gradient(circle, rgba(248, 250, 252, 0.8) 0%, rgba(226, 232, 240, 0.3) 70%, transparent 100%);
+  pointer-events: none;
+  animation: float 4s ease-in-out infinite;
+}
+
+.cloud-button .cloud-decoration:nth-child(1) {
+  width: 18px;
+  height: 15px;
+  top: -8px;
+  left: 15%;
+  border-radius: 60% 40% 65% 35% / 70% 55% 45% 30%;
+  animation-delay: 0s;
+}
+
+.cloud-button .cloud-decoration:nth-child(2) {
+  width: 14px;
+  height: 12px;
+  top: -6px;
+  right: 20%;
+  border-radius: 45% 55% 40% 60% / 50% 70% 30% 50%;
+  animation-delay: 1.5s;
+}
+
+.cloud-button .cloud-decoration:nth-child(3) {
+  width: 16px;
+  height: 13px;
+  bottom: -7px;
+  left: 25%;
+  border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%;
+  animation-delay: 3s;
+}
+
+.cloud-button .cloud-decoration:nth-child(4) {
+  width: 12px;
+  height: 10px;
+  bottom: -5px;
+  right: 30%;
+  border-radius: 55% 45% 70% 30% / 65% 35% 65% 35%;
+  animation-delay: 2s;
+}
+
+.cloud-button .cloud-decoration:nth-child(5) {
+  width: 10px;
+  height: 8px;
+  top: 50%;
+  left: -8px;
+  border-radius: 40% 60% 55% 45% / 70% 30% 70% 30%;
+  animation-delay: 0.5s;
+}
+
+.cloud-button .cloud-decoration:nth-child(6) {
+  width: 11px;
+  height: 9px;
+  top: 40%;
+  right: -7px;
+  border-radius: 65% 35% 45% 55% / 50% 50% 50% 50%;
+  animation-delay: 2.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-3px) rotate(180deg);
+    opacity: 1;
+  }
+}
