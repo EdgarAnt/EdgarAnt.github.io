@@ -11,7 +11,7 @@ const Heart = () => {
             <BackgroundMusic />
             <div className="flex flex-col items-center">
                 <Link to="/thoughts">
-                    <div className="w-[300px] h-[300px] flex items-center justify-center transition-transform hover:scale-105">
+                    <div className="w-[250px] h-[250px] flex items-center justify-center transition-transform hover:scale-105">
                         <img 
                             src={IMAGES.HEART}
                             alt="Heart"
@@ -19,7 +19,7 @@ const Heart = () => {
                         />
                     </div>
                 </Link>
-                <p className="text-sm font-bold text-gray-400 mt-4">
+                <p className="text-xs font-bold text-gray-400 mt-3">
                     (Click to see my feelings)
                 </p>
             </div>

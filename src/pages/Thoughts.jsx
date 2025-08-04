@@ -136,6 +136,22 @@ const Thoughts = () => {
         <div className="min-h-screen bg-white py-8 md:py-16 px-4 md:px-8 relative">
             <BackArrow href="/heart" />
             <BackgroundMusic />
+            
+            {/* Discrete mouse hint - visible on all devices */}
+            <div className="absolute top-8 right-4 z-20">
+           <div className="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-lg px-2 py-1.5 shadow-sm border border-gray-200/50 hover:bg-white/90 transition-colors">
+             <div className="relative">
+               {/* Mouse icon */}
+               <svg width="9" height="11" viewBox="0 0 9 11" fill="none" className="text-gray-400">
+                 <rect x="1" y="1" width="7" height="9" rx="3.5" stroke="currentColor" strokeWidth="0.7" fill="white"/>
+                 <rect x="3.5" y="2.5" width="2" height="2" rx="1" fill="currentColor"/>
+                 {/* Click animation dot */}
+                 <circle cx="4.5" cy="3.5" r="0.3" fill="currentColor" className="animate-ping opacity-75"/>
+               </svg>
+             </div>
+             <span className="text-xs text-gray-400 font-medium">Press the cards</span>
+           </div>
+         </div>
             <div className="max-w-[1400px] mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-y-8 md:gap-x-6 lg:gap-x-8">
                     <div className="col-span-2 md:col-span-1">
@@ -143,7 +159,7 @@ const Thoughts = () => {
                             <img 
                                 src={IMAGES.MOM}
                                 alt="Tree Scene"
-                                className="w-full max-w-[650px] ml-0 lg:-ml-[50px]"
+                                className="w-full max-w-[650px] lg:max-w-[320px] ml-0 lg:-ml-[15px] relative z-30"
                                 style={{
                                     filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))'
                                 }}

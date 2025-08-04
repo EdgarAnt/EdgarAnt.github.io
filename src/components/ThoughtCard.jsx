@@ -23,7 +23,7 @@ const ThoughtCard = ({ frontContent, backContent }) => {
 
     return (
         <div 
-            className="cursor-pointer perspective-1000 w-[154px] h-[227px] md:w-[302px] md:h-[410px]"
+            className="cursor-pointer perspective-1000 w-[154px] h-[227px] lg:w-[200px] lg:h-[280px]"
             onClick={handleInteraction}
             onMouseEnter={() => isDesktop && setIsFlipped(true)}
             onMouseLeave={() => isDesktop && setIsFlipped(false)}
