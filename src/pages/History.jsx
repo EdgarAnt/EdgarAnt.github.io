@@ -14,13 +14,13 @@ const History = () => {
                     <div className="hidden sm:block absolute -top-10 -left-4 w-48 sm:w-64 lg:w-72 h-48 sm:h-64 lg:h-72 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
                     
                     {/* Content */}
-                    <div className="relative space-y-12 sm:space-y-14 lg:space-y-6">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-800">
+                    <div className="relative space-y-3 sm:space-y-4 lg:space-y-5">
+                        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-800">
                             My History
                         </h1>
                         
-                        <div className="bg-white backdrop-blur-lg bg-opacity-90 rounded-2xl sm:rounded-3xl shadow-xl p-8 sm:p-10 lg:p-12 max-w-4xl mx-auto">
-                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light">
+                        <div className="bg-white backdrop-blur-lg bg-opacity-90 rounded-lg sm:rounded-xl shadow-xl p-3 sm:p-4 lg:p-5 max-w-xl mx-auto">
+                            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed font-light">
                                 A story is not told in two days, even in months, this will take time because it is my life, it is my essence. But one thing that is very clear to me is that you were part of it, thank you very much, my grandparents, my siblings, friends and above all my parents and pets, I would not be who I am if it weren't for you "Just in construction".
                             </p>
                         </div>
@@ -28,9 +28,9 @@ const History = () => {
                 </div>
 
                 {/* ASCII Art Section */}
-                <div className="mt-12 sm:mt-14 lg:mt-6 bg-gray-900 rounded-2xl sm:rounded-3xl shadow-2xl p-0 max-w-4xl mx-auto h-[300px] sm:h-[400px] lg:h-[500px] flex items-center overflow-x-scroll">
-                    <div className="-ml-28 sm:ml-4 lg:ml-8">
-                        <pre className="font-mono text-gray-300 text-[0.7rem] sm:text-xs lg:text-sm whitespace-pre leading-none transform scale-[0.65] sm:scale-90 lg:scale-100">{`    ░░                      ░░      ████████████  ░░                    ░░            
+                <div className="mt-6 sm:mt-7 lg:mt-3 bg-gray-900 rounded-lg sm:rounded-xl shadow-2xl p-4 max-w-xl mx-auto h-[200px] sm:h-[250px] lg:h-[300px] flex justify-center overflow-hidden">
+                    <div>
+                        <pre className="font-mono text-gray-300 text-[0.5rem] sm:text-[0.6rem] lg:text-[0.7rem] whitespace-pre leading-none transform scale-[0.6] sm:scale-[0.7] lg:scale-[0.8]">{`    ░░                      ░░      ████████████  ░░                    ░░            
                                  ████          ████                                  
                                ████              ████                                
 ░ ░      ░░                ░░██                      ██░░              ░░            
@@ -42,17 +42,23 @@ const History = () => {
                          ██  ████    ██  ██  ██    ████  ██                      /'v'\\
                            ██  ██      ██  ██      ██  ██                       (/   \\)
                                  ██              ██                            ='="="===<
-                                   ██████████████                         Paullie|_|
+                                   ██████████████                          Paullie|_|
                                  ██              ██                                  
                                  ██              ██                                  
                                  ██    ██  ██    ██                                  
-                               ████    ██  ██    ████     ~°I'm getting there, I'm being consistent~
-   my 3 cats                   ████    ██  ██    ████                and im enjoyng this          
+                               ████    ██  ██    ████
+   my 3 cats                   ████    ██  ██    ████
  \\    /\\                     ██  ██    ██  ██    ██  ██                              
   )  ( ')          ░░        ██  ██    ██  ██    ██  ██        ░░                    
   (  /  )                      ████    ██████    ████                                
    \\(__)|                    ██    ████      ████    ██                              
-░░░░░░  ░░░░  ░░░░░░  ░░░░░░  ██████    ░░  ░░  ██████░░░░░░░░  ░░░░░░  ░░░░  ░░░░`}</pre>
+░░░░░░  ░░░░  ░░░░░░  ░░░░░░  ██████    ░░  ░░  ██████░░░░░░░░  ░░░░░░  ░░░░  ░░░░
+                                                                                    
+
+                        ~°I'm getting there, I'm being consistent~                 
+                                   and im enjoying this   
+                                   
+                                   `}</pre>
                     </div>
                 </div>
             </div>
