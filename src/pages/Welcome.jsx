@@ -42,12 +42,12 @@ const Welcome = () => {
                     onClick={() => setShowImageQuote(false)}
                 >
                     <div 
-                        className="bg-white rounded-[40px] p-12 max-w-4xl w-full modal-animation relative"
+                        className="bg-white rounded-[20px] sm:rounded-[40px] p-4 sm:p-12 max-w-xs sm:max-w-4xl w-full modal-animation relative max-h-[90vh] overflow-y-auto lg:overflow-visible lg:max-h-none"
                         onClick={e => e.stopPropagation()}
                     >
                         <button 
                             onClick={() => setShowImageQuote(false)}
-                            className="absolute top-6 right-6 w-4 h-4 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-200 flex items-center justify-center"
+                            className="absolute top-3 right-3 sm:top-6 sm:right-6 w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-200 flex items-center justify-center"
                             aria-label="Cerrar"
                         >
                             <span className="sr-only">Cerrar</span>
@@ -57,9 +57,9 @@ const Welcome = () => {
                             <img 
                                 src={IMAGES.ME}
                                 alt="Welcome" 
-                                className="w-[400px] h-[400px] rounded-full object-cover mb-8"
+                                className="w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-full object-cover mb-4 sm:mb-8"
                             />
-                            <p className="text-gray-700 text-center mt-6 text-xl max-w-2xl leading-relaxed">
+                            <p className="text-gray-700 text-center mt-3 sm:mt-6 text-sm sm:text-xl max-w-full sm:max-w-2xl leading-relaxed px-2 sm:px-0">
                                 {spanishQuote}
                             </p>
                         </div>
