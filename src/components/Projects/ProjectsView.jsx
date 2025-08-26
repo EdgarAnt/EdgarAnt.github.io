@@ -547,6 +547,163 @@ portfolio/
                 },
             },
         },
+        {
+            id: 7,
+            name: "Game of Life",
+            icon: (
+                <img
+                    src="/images/game-of-life.svg"
+                    alt="Game of Life"
+                    className={viewType === "grid" ? "w-12 h-12 sm:w-12 sm:h-12 object-contain" : "w-8 h-8"}
+                />
+            ),
+            type: "React.js, Canvas & Cellular Automaton",
+            lastModified: "2024-12-20",
+            overview: {
+                description:
+                    "Implementación del famoso autómata celular 'Juego de la Vida' de John Conway. Una simulación fascinante que demuestra cómo reglas simples pueden crear patrones complejos y comportamientos emergentes.",
+                role: "Frontend Developer",
+                keyContributions: [
+                    "Implementación del algoritmo del Juego de la Vida",
+                    "Interfaz interactiva con controles de simulación",
+                    "Visualización en tiempo real con Canvas",
+                    "Patrones predefinidos y editor de células",
+                ],
+            },
+            technologies: [
+                "React.js",
+                "HTML5 Canvas",
+                "JavaScript",
+                "Cellular Automaton",
+                "Algorithm Implementation",
+                "Interactive UI",
+            ],
+            links: {
+                linkedin: "https://www.linkedin.com/in/edgarant/",
+                github: "https://github.com/EdgarAnt",
+                instagram: "https://www.instagram.com/tony_tony_swg/",
+            },
+            collaborators: {
+                institutions: {
+                    personal: {
+                        name: "Personal Project",
+                        members: [
+                            {
+                                name: "Edgar Antonio Alvarez Gonzalez",
+                                linkedin:
+                                    "https://www.linkedin.com/in/edgarant/",
+                            },
+                        ],
+                    },
+                },
+            },
+            process: [],
+        },
+        {
+            id: 8,
+            name: "Leo Mentor",
+            icon: (
+                <img
+                    src="/images/leo-mentor.svg"
+                    alt="Leo Mentor"
+                    className={viewType === "grid" ? "w-12 h-12 sm:w-12 sm:h-12 object-contain" : "w-8 h-8"}
+                />
+            ),
+            type: "React.js, Prolog, Expert System & AI",
+            lastModified: "2024-02-20",
+            image: "/images/leo-mentor.svg",
+            overview: {
+                description:
+                    "Expert system developed as a mentor for people who don't know what career to choose. This system can help them decide on a professional path for their future. Developed using Prolog libraries for JavaScript, with an MVP (Minimum Viable Product) approach for development organization.",
+                role: "Full Stack Developer & System Designer",
+                mainImage: "/images/leo-mentor.svg",
+                keyContributions: [
+                    "Development of knowledge-based expert system",
+                    "Implementation of Prolog libraries for JavaScript",
+                    "Interface design and animations with React and Tailwind CSS",
+                    "Research and consultation with expert mentor to define key questions",
+                    "Application of MVP methodology for development organization",
+                ],
+                projectLinks: {
+                    liveDemo: "https://edgarant.github.io/LeoMentor/",
+                    github: "https://github.com/EdgarAnt/LeoMentor",
+                },
+            },
+            collaborators: {
+                institutions: {
+                    udg: {
+                        name: "University of Guadalajara",
+                        members: [
+                            {
+                                name: "Edgar Antonio Alvarez Gonzalez",
+                                linkedin:
+                                    "https://www.linkedin.com/in/edgarant/",
+                            },
+                            {
+                                name: "Miguel Gómez",
+                                linkedin:
+                                    "https://www.linkedin.com/in/miguel-gomez-dev/",
+                            },
+                            {
+                                name: "Carlos Alberto Sanchez Moreno",
+                                linkedin: "#",
+                            },
+                            {
+                                name: "Adolfo Benjamin Lamas Abbadie",
+                                linkedin: "#",
+                            },
+                        ],
+                    },
+                },
+            },
+            process: [
+                {
+                    title: "Research & Expert Consultation",
+                    images: ["/images/Leos.gif"],
+                    description: "We began by conducting comprehensive research and establishing regular consultations with expert mentors to identify and understand the most critical questions that determine professional career choice. We analyzed decision patterns and developed a solid knowledge framework."
+                },
+                {
+                    title: "MVP Planning & Scrum Implementation",
+                    images: [],
+                    description: "We implemented MVP (Minimum Viable Product) methodology combined with Scrum to structure development. We used Trello as a project management tool to organize sprints, define user stories and track progress. We established regular Scrum ceremonies including daily standups, sprint planning and retrospectives."
+                },
+                {
+                    title: "System Architecture & Design",
+                    images: [],
+                    description: "We designed the expert system architecture applying knowledge engineering principles. We defined inference rules, structured the knowledge base and established reasoning algorithms. We created flow diagrams and detailed technical specifications."
+                },
+                {
+                    title: "Iterative Development Process",
+                    images: [],
+                    description: "We executed iterative and incremental development using React.js, Tailwind CSS and specialized Prolog libraries for JavaScript. We implemented core functionalities in 2-week sprints, performed continuous testing and deployed monthly improvements based on user feedback."
+                },
+                {
+                    title: "UI/UX Design & Animation",
+                    images: [],
+                    description: "We developed a complete and intuitive user interface, incorporating custom animations and micro-interactions. We applied UX design principles to create a smooth and engaging experience that effectively guides users through the professional mentoring process."
+                },
+            ],
+            technologies: [
+                "React.js",
+                "Tailwind CSS",
+                "Prolog",
+                "JavaScript",
+                "Expert Systems",
+                "Knowledge-Based Systems",
+                "MVP Methodology",
+                "UI/UX Design",
+                "Animation Design",
+            ],
+            externalLinks: {
+                liveDemo: "https://edgarant.github.io/LeoMentor/",
+                github: "https://github.com/EdgarAnt/LeoMentor",
+            },
+            links: {
+                linkedin: "https://www.linkedin.com/in/edgarant/",
+                github: "https://github.com/EdgarAnt",
+                instagram: "https://www.instagram.com/tony_tony_swg/",
+            },
+        },
     ];
 
     return (

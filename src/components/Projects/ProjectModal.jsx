@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ExpandableImage from "./ExpandableImage";
+import GameOfLife from "./GameOfLife";
 
 const ProjectModal = ({ project, onClose }) => {
     const [currentSection, setCurrentSection] = useState("overview");
@@ -72,20 +73,27 @@ const ProjectModal = ({ project, onClose }) => {
                 {/* Navigation */}
                 <div className="bg-white border-b border-gray-200">
                     <nav className="flex space-x-4 px-6">
-                        {["overview", "process", "contact"].map((section) => (
-                            <button
-                                key={section}
-                                onClick={() => handleSectionChange(section)}
-                                className={`py-4 px-2 border-b-2 font-medium text-sm ${
-                                    currentSection === section
-                                        ? "border-blue-500 text-blue-600"
-                                        : "border-transparent text-gray-500 hover:text-gray-700"
-                                }`}
-                            >
-                                {section.charAt(0).toUpperCase() +
-                                    section.slice(1)}
-                            </button>
-                        ))}
+                        {(() => {
+                            const baseSections = ["overview", "process", "contact"];
+                            const sections = project.name === "Game of Life" 
+                                ? ["overview", "play", "process", "contact"]
+                                : baseSections;
+                            
+                            return sections.map((section) => (
+                                <button
+                                    key={section}
+                                    onClick={() => handleSectionChange(section)}
+                                    className={`py-4 px-2 border-b-2 font-medium text-sm ${
+                                        currentSection === section
+                                            ? "border-blue-500 text-blue-600"
+                                            : "border-transparent text-gray-500 hover:text-gray-700"
+                                    }`}
+                                >
+                                    {section.charAt(0).toUpperCase() +
+                                        section.slice(1)}
+                                </button>
+                            ));
+                        })()}
                     </nav>
                 </div>
 
@@ -274,6 +282,12 @@ const ProjectModal = ({ project, onClose }) => {
                         </div>
                     )}
 
+                    {currentSection === "play" && project.name === "Game of Life" && (
+                        <div className="space-y-6">
+                            <GameOfLife />
+                        </div>
+                    )}
+
                     {currentSection === "process" && (
                         <div className="space-y-8">
                             {project.process && project.process.length > 0 ? (
@@ -335,6 +349,72 @@ const ProjectModal = ({ project, onClose }) => {
                                             )}
                                         </div>
                                     ))
+                                ) : project.name === "Leo Mentor" ? (
+                                    // Special rendering for Leo Mentor
+                                    <div className="space-y-8">
+                                        {/* Centered image */}
+                                        <div className="flex justify-center mb-8">
+                                            <ExpandableImage
+                                                src="/images/Leos.gif"
+                                                alt="Leo Mentor Development Process"
+                                                className="w-full max-w-md h-auto object-contain rounded-lg shadow-lg"
+                                                containerClassName="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all"
+                                            />
+                                        </div>
+                                        
+                                        {/* Centered process summary */}
+                                        <div className="text-center max-w-4xl mx-auto space-y-6">
+                                            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 shadow-sm">
+                                                <h3 className="text-2xl font-bold text-gray-800 mb-4">Development Process</h3>
+                                                <p className="text-gray-700 leading-relaxed mb-4">
+                                                    Leo Mentor was developed as an expert system for vocational guidance, 
+                                                    combining artificial intelligence with agile development methodologies.
+                                                </p>
+                                                
+                                                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                                                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                                                        <h4 className="font-semibold text-blue-600 mb-2">🔬 Research & Consulting</h4>
+                                                        <p className="text-sm text-gray-600">
+                                                            Comprehensive research with expert mentors to identify 
+                                                            key questions in professional career choice.
+                                                        </p>
+                                                    </div>
+                                                    
+                                                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                                                        <h4 className="font-semibold text-green-600 mb-2">📋 MVP & Scrum</h4>
+                                                        <p className="text-sm text-gray-600">
+                                                            Implementation of MVP methodology with Scrum, using Trello 
+                                                            for sprint management and progress tracking.
+                                                        </p>
+                                                    </div>
+                                                    
+                                                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                                                        <h4 className="font-semibold text-purple-600 mb-2">🏗️ System Architecture</h4>
+                                                        <p className="text-sm text-gray-600">
+                                                            Expert system architecture design with inference rules 
+                                                            and specialized reasoning algorithms.
+                                                        </p>
+                                                    </div>
+                                                    
+                                                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                                                        <h4 className="font-semibold text-orange-600 mb-2">⚡ Iterative Development</h4>
+                                                        <p className="text-sm text-gray-600">
+                                                            Incremental development with React.js, Tailwind CSS and Prolog, 
+                                                            with 2-week sprints and continuous improvements.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="mt-6 bg-white rounded-lg p-4 shadow-sm">
+                                                    <h4 className="font-semibold text-indigo-600 mb-2">🎨 UI/UX & Animations</h4>
+                                                    <p className="text-sm text-gray-600">
+                                                        Intuitive interface with custom animations and micro-interactions 
+                                                        that effectively guide users through the mentoring process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 ) : (
                                     // Renderizado normal para otros proyectos
                                     project.process.map((phase) => (
