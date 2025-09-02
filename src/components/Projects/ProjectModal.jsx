@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ExpandableImage from "./ExpandableImage";
 import GameOfLife from "./GameOfLife";
+import TakopisBlockerWeb from "./TakopisBlockerWeb";
 
 const ProjectModal = ({ project, onClose }) => {
     const [currentSection, setCurrentSection] = useState("overview");
@@ -75,9 +76,14 @@ const ProjectModal = ({ project, onClose }) => {
                     <nav className="flex space-x-4 px-6">
                         {(() => {
                             const baseSections = ["overview", "process", "contact"];
-                            const sections = project.name === "Game of Life" 
-                                ? ["overview", "play", "process", "contact"]
-                                : baseSections;
+                            let sections;
+                            if (project.name === "Game of Life") {
+                                sections = ["overview", "play", "process", "contact"];
+                            } else if (project.name === "Takopi's BlockerWeb") {
+                                sections = ["overview", "documentation", "process", "contact"];
+                            } else {
+                                sections = baseSections;
+                            }
                             
                             return sections.map((section) => (
                                 <button
@@ -285,6 +291,12 @@ const ProjectModal = ({ project, onClose }) => {
                     {currentSection === "play" && project.name === "Game of Life" && (
                         <div className="space-y-6">
                             <GameOfLife />
+                        </div>
+                    )}
+
+                    {currentSection === "documentation" && project.name === "Takopi's BlockerWeb" && (
+                        <div className="space-y-6">
+                            <TakopisBlockerWeb />
                         </div>
                     )}
 

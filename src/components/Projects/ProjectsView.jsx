@@ -384,7 +384,13 @@ def comprimir_gif(ruta_gif):
                     },
                 },
             },
-            process: [],
+            process: [
+                {
+                    title: "Proceso de Desarrollo",
+                    subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
+                    images: ["/images/TakopisGif.gif"]
+                }
+            ],
         },
         {
             id: 5,
@@ -433,7 +439,13 @@ def comprimir_gif(ruta_gif):
                     },
                 },
             },
-            process: [],
+            process: [
+                {
+                    title: "Proceso de Desarrollo",
+                    subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
+                    images: ["/images/TakopisGif.gif"]
+                }
+            ],
         },
         {
             id: 6,
@@ -597,10 +609,82 @@ portfolio/
                     },
                 },
             },
-            process: [],
+            process: [
+                {
+                     title: "Proceso de Desarrollo",
+                     subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
+                     images: ["/images/TakopisGif.gif"]
+                 }
+            ],
         },
         {
             id: 8,
+            name: "Takopi's BlockerWeb",
+            icon: (
+                <img
+                    src="/images/takopi.png"
+                    alt="Takopi's BlockerWeb"
+                    className={viewType === "grid" ? "w-12 h-12 sm:w-12 sm:h-12 object-contain" : "w-8 h-8"}
+                />
+            ),
+            type: "Python, Tkinter & System Administration",
+            lastModified: "2024-12-20",
+            image: "/images/takopi.png",
+            overview: {
+                description:
+                    "Aplicación de escritorio para bloquear sitios web con múltiples modos de operación. Desarrollada en Python con interfaz gráfica Tkinter, incluye tres modos distintos: Normal, Estricto y Amigo, cada uno con características específicas para diferentes necesidades de control de acceso.",
+                role: "Desktop Application Developer & System Designer",
+                mainImage: "/images/takopi.png",
+                keyContributions: [
+                    "Desarrollo de aplicación de escritorio con interfaz gráfica Tkinter",
+                    "Implementación de tres modos de bloqueo distintos con funcionalidades específicas",
+                    "Sistema de seguridad con contraseñas hash SHA-256 y temporizadores",
+                    "Modificación segura del archivo hosts del sistema para bloqueo efectivo",
+                    "Empaquetado con PyInstaller para distribución como ejecutable standalone",
+                    "Gestión de persistencia de datos con archivos JSON",
+                ],
+                projectLinks: {
+                    github: "https://github.com/EdgarAnt/BlockWebsite--Python",
+                },
+            },
+            technologies: [
+                "Python 3.10+",
+                "Tkinter GUI",
+                "PyInstaller",
+                "JSON Persistence",
+                "SHA-256 Hashing",
+                "System Administration",
+                "Windows API",
+            ],
+            links: {
+                linkedin: "https://www.linkedin.com/in/edgarant/",
+                github: "https://github.com/EdgarAnt",
+                instagram: "https://www.instagram.com/tony_tony_swg/",
+            },
+            collaborators: {
+                institutions: {
+                    personal: {
+                        name: "Personal Project",
+                        members: [
+                            {
+                                name: "Edgar Antonio Alvarez Gonzalez",
+                                linkedin:
+                                    "https://www.linkedin.com/in/edgarant/",
+                            },
+                        ],
+                    },
+                },
+            },
+            process: [
+                {
+                    title: "Proceso de Desarrollo",
+                    subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
+                    images: ["/images/TakopisGif.gif"]
+                }
+            ],
+        },
+        {
+            id: 9,
             name: "Leo Mentor",
             icon: (
                 <img
