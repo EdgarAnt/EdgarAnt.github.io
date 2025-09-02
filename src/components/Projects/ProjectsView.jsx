@@ -389,6 +389,11 @@ def comprimir_gif(ruta_gif):
                     title: "Proceso de Desarrollo",
                     subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
                     images: ["/images/TakopisGif.gif"]
+                },
+                {
+                    title: "Video haciéndolo",
+                    subtitle: "Transmisión en vivo del desarrollo del proyecto",
+                    videoUrl: "https://www.twitch.tv/videos/2555686003"
                 }
             ],
         },
@@ -444,6 +449,11 @@ def comprimir_gif(ruta_gif):
                     title: "Proceso de Desarrollo",
                     subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
                     images: ["/images/TakopisGif.gif"]
+                },
+                {
+                    title: "Video haciéndolo",
+                    subtitle: "Transmisión en vivo del desarrollo del proyecto",
+                    videoUrl: "https://www.twitch.tv/videos/2555686003"
                 }
             ],
         },
@@ -680,6 +690,11 @@ portfolio/
                     title: "Proceso de Desarrollo",
                     subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
                     images: ["/images/TakopisGif.gif"]
+                },
+                {
+                    title: "Video haciéndolo",
+                    subtitle: "Transmisión en vivo del desarrollo del proyecto",
+                    videoUrl: "https://www.twitch.tv/videos/2555686003"
                 }
             ],
         },

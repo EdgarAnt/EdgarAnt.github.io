@@ -531,6 +531,26 @@ const ProjectModal = ({ project, onClose }) => {
                                                     ))}
                                                 </div>
                                             )}
+                                            
+                                            {/* Video if exists */}
+                                            {phase.videoUrl && (
+                                                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                                                    <a 
+                                                        href={phase.videoUrl} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="flex items-center space-x-3 text-purple-600 hover:text-purple-700 font-medium transition-colors"
+                                                    >
+                                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>Ver video del desarrollo en Twitch</span>
+                                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            )}
                                         </div>
                                     ))
                                 )
