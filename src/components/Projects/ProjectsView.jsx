@@ -386,13 +386,13 @@ def comprimir_gif(ruta_gif):
             },
             process: [
                 {
-                    title: "Proceso de Desarrollo",
-                    subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
+                    title: "Development Process",
+                    subtitle: "Complete development of the website blocking application",
                     images: ["/images/TakopisGif.gif"]
                 },
                 {
-                    title: "Video haciéndolo",
-                    subtitle: "Transmisión en vivo del desarrollo del proyecto",
+                    title: "Development Video",
+                    subtitle: "Live stream of the project development",
                     videoUrl: "https://www.twitch.tv/videos/2555686003"
                 }
             ],
@@ -446,13 +446,13 @@ def comprimir_gif(ruta_gif):
             },
             process: [
                 {
-                    title: "Proceso de Desarrollo",
-                    subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
+                    title: "Development Process",
+                    subtitle: "Complete development of the website blocking application",
                     images: ["/images/TakopisGif.gif"]
                 },
                 {
-                    title: "Video haciéndolo",
-                    subtitle: "Transmisión en vivo del desarrollo del proyecto",
+                    title: "Development Video",
+                    subtitle: "Live stream of the project development",
                     videoUrl: "https://www.twitch.tv/videos/2555686003"
                 }
             ],
@@ -621,10 +621,10 @@ portfolio/
             },
             process: [
                 {
-                     title: "Proceso de Desarrollo",
-                     subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
-                     images: ["/images/TakopisGif.gif"]
-                 }
+                    title: "Development Process",
+                    subtitle: "Complete development of the website blocking application",
+                    images: ["/images/TakopisGif.gif"]
+                }
             ],
         },
         {
@@ -642,16 +642,16 @@ portfolio/
             image: "/images/takopi.png",
             overview: {
                 description:
-                    "Aplicación de escritorio para bloquear sitios web con múltiples modos de operación. Desarrollada en Python con interfaz gráfica Tkinter, incluye tres modos distintos: Normal, Estricto y Amigo, cada uno con características específicas para diferentes necesidades de control de acceso.",
+                    "Desktop application for blocking websites with multiple operation modes. Developed in Python with Tkinter GUI, includes three distinct modes: Normal, Strict, and Friend, each with specific features for different access control needs.",
                 role: "Desktop Application Developer & System Designer",
                 mainImage: "/images/takopi.png",
                 keyContributions: [
-                    "Desarrollo de aplicación de escritorio con interfaz gráfica Tkinter",
-                    "Implementación de tres modos de bloqueo distintos con funcionalidades específicas",
-                    "Sistema de seguridad con contraseñas hash SHA-256 y temporizadores",
-                    "Modificación segura del archivo hosts del sistema para bloqueo efectivo",
-                    "Empaquetado con PyInstaller para distribución como ejecutable standalone",
-                    "Gestión de persistencia de datos con archivos JSON",
+                    "Desktop application development with Tkinter GUI interface",
+                    "Implementation of three distinct blocking modes with specific functionalities",
+                    "Security system with SHA-256 hash passwords and timers",
+                    "Safe modification of system hosts file for effective blocking",
+                    "Packaging with PyInstaller for standalone executable distribution",
+                    "Data persistence management with JSON files",
                 ],
                 projectLinks: {
                     github: "https://github.com/EdgarAnt/BlockWebsite--Python",
@@ -687,13 +687,13 @@ portfolio/
             },
             process: [
                 {
-                    title: "Proceso de Desarrollo",
-                    subtitle: "Desarrollo completo de la aplicación de bloqueo de sitios web",
+                    title: "Development Process",
+                    subtitle: "Complete development of the website blocking application",
                     images: ["/images/TakopisGif.gif"]
                 },
                 {
-                    title: "Video haciéndolo",
-                    subtitle: "Transmisión en vivo del desarrollo del proyecto",
+                    title: "Development Video",
+                    subtitle: "Live stream of the project development",
                     videoUrl: "https://www.twitch.tv/videos/2555686003"
                 }
             ],
