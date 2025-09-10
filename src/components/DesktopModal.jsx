@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ProjectsView from './Projects/ProjectsView';
 import ExperienceCard from './ExperienceCard';
+import GaleriaModal from './Galeria/GaleriaModal';
 
 const DesktopModal = ({ isOpen, onClose }) => {
     const [currentView, setCurrentView] = useState('main');
     const [activeTab, setActiveTab] = useState('profile');
     const [text, setText] = useState('');
+    const [showGaleriaModal, setShowGaleriaModal] = useState(false);
     const fullText = `> Hello, I'm Edgar Antonio
 > Student/intern
 > Contact: edgarant.dev@gmail.com
@@ -143,7 +145,7 @@ const DesktopModal = ({ isOpen, onClose }) => {
         { name: 'Projects', icon: '📁', action: () => setCurrentView('projects') },
         { name: 'Art', icon: '📁', path: '/art' },
         { name: 'Code', icon: '📁', path: '/code' },
-        { name: 'Gallery', icon: '📁', path: '/gallery' },
+        { name: 'Gallery', icon: '📁', action: () => setShowGaleriaModal(true) },
         { name: 'Notes', icon: '📁', path: '/notes' },
     ];
 
@@ -438,6 +440,10 @@ const DesktopModal = ({ isOpen, onClose }) => {
                     <AboutMeView />
                 ) : null}
             </div>
+
+            {showGaleriaModal && (
+                <GaleriaModal onClose={() => setShowGaleriaModal(false)} />
+            )}
         </div>
     );
 };
